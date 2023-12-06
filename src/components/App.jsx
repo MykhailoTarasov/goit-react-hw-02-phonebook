@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import { Title } from './App.Styled';
 
 class App extends Component {
   state = {
@@ -45,18 +46,18 @@ class App extends Component {
     return (
       <div
         style={{
-          height: '100vh',
           display: 'flex',
           justifyContent: 'center',
           fontSize: 20,
           color: '#010101',
+          backgroundColor: '#b6f7dd'
         }}
       >
         <div>
-          <h2>Phonebook</h2>
+          <Title>Phonebook</Title>
           <ContactForm onAdd={this.addContact} />
 
-          <h2>Contacts</h2>
+          <Title>Contacts</Title>
           <Filter filter={filter} onChangeFilter={this.changeFilter} />
           <ContactList contacts={visibleContacts} onDeleteContact={this.deleteContact}/>
         </div>

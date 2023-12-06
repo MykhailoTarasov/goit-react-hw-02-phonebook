@@ -1,6 +1,8 @@
+import { FilterContainer, FilterTitle } from "./Filter.Styled";
+
 const Filter = ({ filter, onChangeFilter }) => (
-  <div>
-    Find contact by name
+  <FilterContainer>
+    <FilterTitle>Find contact by name</FilterTitle>
     <input
       type="text"
       value={filter}
@@ -9,7 +11,7 @@ const Filter = ({ filter, onChangeFilter }) => (
         onChangeFilter(evt.target.value);
       }}
     />
-  </div>
+  </FilterContainer>
 );
 
 export default Filter;

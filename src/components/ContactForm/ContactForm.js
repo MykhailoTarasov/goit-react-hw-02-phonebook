@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { FormContainer } from './ContactForm.Styled';
 
 const validation = Yup.object().shape({
     name: Yup.string()
@@ -19,7 +20,7 @@ const validation = Yup.object().shape({
   });
 
 const ContactForm = ({onAdd}) => (
-  <div>
+  <FormContainer>
     <Formik
       initialValues={{
         name: '',
@@ -47,7 +48,7 @@ const ContactForm = ({onAdd}) => (
         <button type="submit">Add contact</button>
       </Form>
     </Formik>
-  </div>
+  </FormContainer>
 );
 
 export default ContactForm;
