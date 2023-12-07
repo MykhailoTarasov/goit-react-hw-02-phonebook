@@ -1,6 +1,6 @@
-import { Formik, ErrorMessage } from 'formik';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Button, Container, StyledField, StyledForm } from './ContactForm.Styled';
+import { Button, Container, ErrMessageStyled, StyledField, StyledForm } from './ContactForm.Styled';
 
 
 const validation = Yup.object().shape({
@@ -37,13 +37,13 @@ const ContactForm = ({onAdd}) => (
         <label>
           
           <StyledField name="name" placeholder="Name" />
-          <ErrorMessage name="name"/>
+          <ErrMessageStyled name="name" component="div"/>
         </label>
 
         <label>
           
           <StyledField name="number" placeholder="Number" />
-          <ErrorMessage name="number"/>
+          <ErrMessageStyled name="number" component="div"/>
         </label>
 
         <Button type="submit">Add contact</Button>
