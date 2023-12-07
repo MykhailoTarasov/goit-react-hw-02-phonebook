@@ -18,15 +18,17 @@ class App extends Component {
   };
 
   addContact = newContact => {
-    this.setState(prevState => ({
-      contacts: [...prevState.contacts, { ...newContact, id: nanoid() }],
-    }));
+   
 
     const nameExists = this.state.contacts.some(
       contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
     );
     if (nameExists) {
       alert(`${newContact.name}' is arleady in contacts.`);
+    } else {
+      this.setState(prevState => ({
+        contacts: [...prevState.contacts, { ...newContact, id: nanoid() }],
+      }));
     }
   };
 
