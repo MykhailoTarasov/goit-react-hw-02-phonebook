@@ -10,14 +10,16 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  max-width: 100%;
+
   margin: 0;
   padding: 0px;
   list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  max-width: 100%;
 `;
 
 export const ButtonItem = styled.button`
