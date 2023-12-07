@@ -19,17 +19,12 @@ export const ListItem = styled.li`
 `;
 
 export const ButtonItem = styled.button`
-  color: white;
-  background-color: #4d83c2;
-  cursor: pointer;
-  border: none;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 500;
-  font-family: Roboto, sans-serif;
-  letter-spacing: 0.02em;
+width: 100px;
+align-self: center;
+padding: 10px;
+color: white;
+background-color: #4d83c2;
 
-  padding: 12px 24px;
 
   border-radius: 4px;
 `;

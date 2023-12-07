@@ -15,20 +15,26 @@ class App extends Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
-    
   };
 
   addContact = newContact => {
     this.setState(prevState => ({
       contacts: [...prevState.contacts, { ...newContact, id: nanoid() }],
     }));
+
+    const nameExists = this.state.contacts.some(
+      contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
+    );
+    if (nameExists) {
+      alert(`${newContact.name}' is arleady in contacts.`);
+    }
   };
 
   deleteContact = contactId => {
     this.setState(prevState => ({
-      contacts: prevState.contacts.filter(contact => contact.id !== contactId)
-    }))
-  }
+      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
+    }));
+  };
 
   changeFilter = newFilter => {
     this.setState({
@@ -39,9 +45,11 @@ class App extends Component {
   render() {
     const { contacts, filter } = this.state;
 
-    const visibleContacts = filter ? contacts.filter((contact) => 
-      contact.name.toLowerCase().includes(filter.toLowerCase())
-    ) : contacts;
+    const visibleContacts = filter
+      ? contacts.filter(contact =>
+          contact.name.toLowerCase().includes(filter.toLowerCase())
+        )
+      : contacts;
 
     return (
       <div
@@ -50,16 +58,20 @@ class App extends Component {
           justifyContent: 'center',
           fontSize: 20,
           color: '#010101',
-          backgroundColor: '#b6f7dd'
+          backgroundColor: '#b6f7dd',
+          textAlign: 'center',
         }}
       >
         <div>
-          <Title>Phonebook</Title>
+          <h1>Phonebook</h1>
           <ContactForm onAdd={this.addContact} />
 
           <Title>Contacts</Title>
           <Filter filter={filter} onChangeFilter={this.changeFilter} />
-          <ContactList contacts={visibleContacts} onDeleteContact={this.deleteContact}/>
+          <ContactList
+            contacts={visibleContacts}
+            onDeleteContact={this.deleteContact}
+          />
         </div>
       </div>
     );

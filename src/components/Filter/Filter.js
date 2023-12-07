@@ -1,9 +1,9 @@
-import { FilterContainer, FilterTitle } from "./Filter.Styled";
+import { FilterContainer, FilterInput, FilterTitle } from "./Filter.Styled";
 
 const Filter = ({ filter, onChangeFilter }) => (
   <FilterContainer>
     <FilterTitle>Find contact by name</FilterTitle>
-    <input
+    <FilterInput
       type="text"
       value={filter}
       placeholder="Find by name"
