@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
-
- 
   padding: 0;
   list-style: none;
   display: flex;
@@ -10,7 +8,6 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,17 +20,16 @@ export const ListItem = styled.li`
 `;
 
 export const ButtonItem = styled.button`
-width: 100px;
-align-self: center;
-padding: 10px;
-color: white;
-background-color: #4d83c2;
-
+  width: 100px;
+  align-self: center;
+  padding: 10px;
+  color: white;
+  background-color: #4d83c2;
 
   border-radius: 4px;
 `;
 
 export const Text = styled.p`
-padding: 15px;
-margin: 0;
-`
+  padding: 15px;
+  margin: 0;
+`;
