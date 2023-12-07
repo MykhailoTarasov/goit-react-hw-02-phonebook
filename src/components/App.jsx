@@ -58,7 +58,7 @@ class App extends Component {
           justifyContent: 'center',
           fontSize: 20,
           color: '#010101',
-          backgroundColor: '#b6f7dd',
+          
           textAlign: 'center',
         }}
       >

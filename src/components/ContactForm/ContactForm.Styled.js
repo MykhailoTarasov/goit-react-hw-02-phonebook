@@ -45,10 +45,12 @@ export const UserIcon = styled(FaUser)`
   position: absolute;
   top: 11px;
   left: 10px;
+  color: #4d83c2;
 `;
 
 export const PhoneIcon = styled(FaPhone)`
   position: absolute;
   top: 11px;
   left: 10px;
+  color: #4d83c2;
 `;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
-  margin: 0;
+
+ 
   padding: 0;
   list-style: none;
   display: flex;
@@ -10,12 +11,13 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   margin: 0;
-  padding: 15px;
+  padding: 0px;
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
+  max-width: 100%;
 `;
 
 export const ButtonItem = styled.button`
@@ -28,3 +30,8 @@ background-color: #4d83c2;
 
   border-radius: 4px;
 `;
+
+export const Text = styled.p`
+padding: 15px;
+margin: 0;
+`
