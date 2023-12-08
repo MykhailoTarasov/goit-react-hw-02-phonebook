@@ -35,6 +35,7 @@ export const Button = styled.button`
   color: white;
   background-color: #4d83c2;
   border-radius: 4px;
+  cursor: pointer;
 `;
 
 export const Label = styled.label`

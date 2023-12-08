@@ -22,9 +22,11 @@ export const ListItem = styled.li`
 export const ButtonItem = styled.button`
   width: 100px;
   align-self: center;
+
   padding: 10px;
   color: white;
   background-color: #4d83c2;
+  cursor: pointer;
 
   border-radius: 4px;
 `;
